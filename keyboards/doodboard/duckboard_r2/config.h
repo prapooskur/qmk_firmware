@@ -33,3 +33,6 @@
 #ifdef RGBLIGHT_ENABLE
 #define RGBLED_NUM 8    // Number of LEDs
 #endif
+
+//Turn off OLED after a certain duration of no keys being pressed
+#define OLED_TIMEOUT 20000

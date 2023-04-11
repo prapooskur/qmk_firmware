@@ -1,0 +1,21 @@
+//  name     result    chord keys
+
+// [({})]
+COMB(LBRC,   KC_LBRC,  KC_W, KC_D)
+COMB(LPRN,   KC_LPRN,  KC_E, KC_F)
+COMB(LCBR,   KC_LCBR,  KC_R, KC_G)
+COMB(RBRC,   KC_RBRC,  KC_O, KC_SCLN)
+COMB(RPRN,   KC_RPRN,  KC_I, KC_L)
+COMB(RCBR,   KC_RCBR,  KC_U, KC_K)
+
+// MISC
+COMB(ESC,           KC_ESC,     KC_V, MO_NAV)
+COMB(CAPS,          CW_TOGG,    KC_SPACE, OSM_SHFT)
+COMB(UNDO_COMBO,    UNDO,       KC_G, KC_H)
+COMB(REDO_COMBO,    REDO,       KC_V, KC_B)
+COMB(SW_WIN_COMBO,  SW_WIN,     KC_R, KC_T)
+COMB(WIN_MAC_MAGIC, SW_CG,      KC_Q, KC_S, KC_Z)
+
+// QMK
+COMB(BOOT,  QK_BOOT,  KC_Y, KC_U, KC_I, KC_O)
+COMB(RESET, EE_CLR,   KC_W, KC_E, KC_R, KC_T)

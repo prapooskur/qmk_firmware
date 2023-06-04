@@ -1,5 +1,6 @@
 # This file intentionally left blank
 FAUXCLICKY_ENABLE = no      # Use buzzer to emulate clicky switches
+#FAUXCLICKY_ENABLE = yes
 ENCODER_ENABLE = yes
 
 SRC += keyboards/mabroum/mab_haptic.c

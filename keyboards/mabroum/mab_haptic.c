@@ -85,6 +85,7 @@ bool mab_process_record_haptic(uint16_t keycode, keyrecord_t *record) {
             break;
         default:
             break;
+            //DRV_pulse(strong_click);
     }
 
     return true;

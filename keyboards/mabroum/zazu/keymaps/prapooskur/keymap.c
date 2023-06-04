@@ -90,7 +90,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                KC_LALT, MO_NAV, KC_ENT,         KC_SPACE,  MO_SYM, OSM(MOD_LSFT),
                                                 KC_BTN1, KC_BTN3, KC_BTN2,
                                      // click  ,  right  , down   , left   , up
-                                     ACCEL_TOG , KC_RIGHT, KC_DOWN, KC_LEFT, KC_UP
+                                     RGB_TOG , KC_RIGHT, KC_DOWN, KC_LEFT, KC_UP
 
     ),
 
@@ -99,16 +99,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         CESC  , KC_A,  KC_R,   KC_S,   KC_T,   KC_G,                   KC_M,   KC_N,   KC_E,  KC_I,    KC_O,   KC_QUOT,
                 KC_Z,  KC_X,   KC_C,   KC_D,   KC_V,                   KC_K,   KC_H,   KC_COMMA, KC_DOT,  KC_SLSH,
                                KC_LALT, MO_NAV, KC_ENT,         KC_SPACE,  MO_SYM, OSM(MOD_LSFT),
-                                                KC_BTN1, KC_BTN3, KC_BTN2,
+                                                KC_TRNS, KC_TRNS, KC_TRNS,
                                      // click  ,  right  , down   , left   , up
-                                     ACCEL_TOG , KC_RIGHT, KC_DOWN, KC_LEFT, KC_UP
+                                     KC_TRNS , KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
 
     ),
 
     [NAV] = LAYOUT_2_3x5_3(
         KC_TAB , KC_1,     KC_2,    KC_3,    KC_4,    KC_5,              KC_6,    KC_7,      KC_8,     KC_9,     KC_0, KC_TRNS,
         KC_TRNS, KC_MPLY,  KC_MPRV, KC_MNXT, OS_LSFT, KC_MINUS,          KC_LEFT, KC_DOWN,   KC_UP,    KC_RIGHT, WRKFLW2,  WRKFLW2,
-                 OS_LGUI,  OS_LALT, OS_LSFT,  OS_LCTL, SALL,             KC_0,    KC_DEL,    KC_TRNS,  KC_TRNS,   KC_BSLS,
+                 OS_LGUI,  OS_LALT, OS_LSFT,  OS_LCTL, KC_PSCR,             KC_0,    KC_DEL,    KC_TRNS,  KC_TRNS,   KC_BSLS,
                                    KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, MO_ADJ, KC_TRNS,
                                              KC_TRNS, KC_TRNS, KC_TRNS,
                                          // click  ,  right , down      , left   , up

@@ -16,7 +16,7 @@
 
 #include "keyboards/mabroum/mab_haptic.h"
 #include "keyboards/mabroum/keys.h"
-#include "drivers/haptic/DRV2605L.h"
+#include "drivers/haptic/drv2605l.h"
 
 bool mab_process_record_haptic(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
@@ -38,7 +38,8 @@ bool mab_process_record_haptic(uint16_t keycode, keyrecord_t *record) {
         case G(KC_C):
         case G(KC_X):
             if (record->event.pressed) {
-                DRV_pulse(medium_click1);
+                // drv2605l_pulse(medium_click1);
+                drv2605l_pulse(21);
             }
             break;
         case DF(0):
@@ -49,38 +50,40 @@ bool mab_process_record_haptic(uint16_t keycode, keyrecord_t *record) {
         case EE_CLR:
         case QK_BOOT:
             if (record->event.pressed) {
-                DRV_pulse(strong_click1);
+                // drv2605l_pulse(strong_click1);
+                drv2605l_pulse(17);
             }
             break;
         case KC_ESC:
             if (record->event.pressed) {
-                /* DRV_pulse(sharp_tick1); */
-                DRV_pulse(medium_click1);
+                /* drv2605l_pulse(sharp_tick1); */
+                drv2605l_pulse(21);
             }
             break;
         case KC_BTN2:
             if (record->event.pressed) {
-                DRV_pulse(sh_dblclick_str);
+                // drv2605l_pulse(sh_dblclick_str);
+                drv2605l_pulse(27);
             }
             break;
         case KC_S: // save
             if (record->event.pressed) {
                 if ((get_mods() & MOD_MASK_GUI) || (get_oneshot_mods() & MOD_MASK_GUI)) {
-                    DRV_pulse(medium_click1);
+                    drv2605l_pulse(21);
                 }
                 if ((get_mods() & MOD_MASK_CTRL) || (get_oneshot_mods() & MOD_MASK_CTRL)) {
-                    DRV_pulse(medium_click1);
+                    drv2605l_pulse(21);
                 }
             }
             break;
         case TG(1):
             if (record->event.pressed) {
-                DRV_pulse(strong_click1);
+                drv2605l_pulse(17);
             }
             break;
         case CW_TOGG:
             if (record->event.pressed) {
-                DRV_pulse(medium_click1);
+                drv2605l_pulse(21);
             }
             break;
         default:

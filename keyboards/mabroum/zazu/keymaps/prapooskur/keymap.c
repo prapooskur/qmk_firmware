@@ -80,6 +80,8 @@ enum layers {
 #define ALT_L LALT_T(KC_L)
 #define GUI_SCLN RGUI_T(KC_SCLN)
 
+#define PRNTSCN LGUI(LSFT(KC_S))
+
 #include "g/keymap_combo.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -107,8 +109,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [NAV] = LAYOUT_2_3x5_3(
         KC_TAB , KC_1,     KC_2,    KC_3,    KC_4,    KC_5,              KC_6,    KC_7,      KC_8,     KC_9,     KC_0, KC_TRNS,
-        KC_TRNS, KC_MPLY,  KC_MPRV, KC_MNXT, OS_LSFT, KC_MINUS,          KC_LEFT, KC_DOWN,   KC_UP,    KC_RIGHT, WRKFLW2,  WRKFLW2,
-                 OS_LGUI,  OS_LALT, OS_LSFT,  OS_LCTL, KC_PSCR,             KC_0,    KC_DEL,    KC_TRNS,  KC_TRNS,   KC_BSLS,
+        KC_TRNS, KC_MPLY,  KC_MPRV, KC_MNXT, KC_VOLU, KC_MINUS,          KC_LEFT, KC_DOWN,   KC_UP,    KC_RIGHT, WRKFLW2,  WRKFLW2,
+                 OS_LGUI,  OS_LALT, OS_LSFT,  KC_VOLD, PRNTSCN,             KC_0,    KC_DEL,    KC_TRNS,  KC_TRNS,   KC_BSLS,
                                    KC_TRNS, KC_TRNS, KC_TRNS,        KC_TRNS, MO_ADJ, KC_TRNS,
                                              KC_TRNS, KC_TRNS, KC_TRNS,
                                          // click  ,  right , down      , left   , up

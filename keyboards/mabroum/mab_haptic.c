@@ -30,6 +30,7 @@ bool mab_process_record_haptic(uint16_t keycode, keyrecord_t *record) {
         case KC_AUDIO_VOL_UP:
         case KC_AUDIO_VOL_DOWN:
         case KC_BTN1:
+        case KC_BTN2:
         case KC_BTN3:
         case C(KC_V):
         case C(KC_C):
@@ -60,12 +61,15 @@ bool mab_process_record_haptic(uint16_t keycode, keyrecord_t *record) {
                 drv2605l_pulse(21);
             }
             break;
+
+        /*
         case KC_BTN2:
             if (record->event.pressed) {
                 // drv2605l_pulse(sh_dblclick_str);
                 drv2605l_pulse(27);
             }
             break;
+        */
         case KC_S: // save
             if (record->event.pressed) {
                 if ((get_mods() & MOD_MASK_GUI) || (get_oneshot_mods() & MOD_MASK_GUI)) {

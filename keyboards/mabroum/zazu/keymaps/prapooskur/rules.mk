@@ -1,4 +1,4 @@
-MCU_HELIOS = yes
+MCU_HELIOS = no
 
 ifeq ($(strip $(MCU_HELIOS)), yes)
    OPT_DEFS += -DMCU_HELIOS
